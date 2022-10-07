@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+:root {
+    --site-color: #F16D7F;
+}
+
+.site-color {
+    color: var(--site-color);
+}
+
+body {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.header {
+    height: 75px;
+    background: #222222;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.right-icon {
+    padding: 10px 10px;
+}
+
+.logo-icon {
+    margin-right: 38px;
+}
+
+.cart-icon-div {
+    display: inline;
+    position: relative;
+}
+
+.cart-icon {
+    margin-left: 29px;
+}
+
+.circle {
+    position: absolute;
+    right: -8px;
+    top: -20px;
+    color: #fff;
+    width: 19px;
+    background: var(--site-color);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.user-icon {
+    margin-left: 29px;
+}
+
+.banner {
+    background: #F1E4E6;
+    height: 764px;
+    margin-bottom: 65px;
+}
+
+.banner .container {
+    display: flex;
+    height: 800px;
+    margin-bottom: 20px;
+}
+
+.banner-men {
+    margin-right: 231px;
+}
+
+.banner-right {
+    padding-top: 290px;
+    display: flex;
+}
+
+.line {
+    width: 12px;
+    height: 92px;
+    background: var(--site-color);
+}
+
+.banner-right-text {
+    margin-left: 16px;
+}
+
+.brand-text1 {
+    display: block;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 58px;
+}
+
+.brand-text2 {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.offer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 260px 180px;
+    gap: 30px;
+}
+
+.offer img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.offer-card:last-child {
+    grid-column: 1/4;
+}
+
+.offer-card {
+    background: rgba(33, 22, 22);
+    position: relative;
+}
+
+.offer-title {
+    position: relative;
+    height: 100%;
+    /* нужен, чтобы display: flex; работал корректно, 
+    а именно, чтобы justify-content: center; 
+    работал на всю длину блока offer-title */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+.offer-title-bottom {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: var(--site-color);
+}
+
+.offer-card img {
+    opacity: 0.3;
+}
+
+@media (max-width: 1165px) {
+    .banner-men {
+        margin-right: 100px;
+    }
+
+    .offer {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 905px) {
+    .banner-men {
+        margin-right: 20px;
+    }
+
+    .brand-text1 {
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 53px;
+    }
+
+    .brand-text2 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 735px;
+    }
+
+    .left-icon {
+        padding: 2px 15px;
+    }
+
+    .right-icon {
+        padding: 10px 28px;
+    }
+
+    .banner {
+        height: 368px;
+        margin-bottom: 20px;
+    }
+
+    .banner-men img {
+        height: 368px;
+    }
+
+    .banner-men {
+        padding-left: 87px;
+    }
+
+    .banner-right {
+        padding-top: 138px;
+    }
+
+    .offer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 168px 116px;
+        gap: 20px;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 615px) {
+    .banner {
+        max-height: 363px;
+    }
+
+    .banner-men {
+        display: none;
+    }
+
+    .banner .container {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 530px) {
+    .banner-men {
+        margin-right: 100px;
+    }
+
+    .offer {
+        padding: 0 20px;
+        /* display: grid;
+        grid-template-columns: 343px;
+        grid-template-rows: repeat(3, 247px) 111px;
+        row-gap: 32px;
+        column-gap: 32px; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .offer-card {
+        height: 248px;
+    }
+
+    .offer-card:last-child {
+        height: 111px;
+    }
+}
+
+@media (max-width: 375px) {
+    .user-icon {
+        display: none;
+    }
+
+    .cart-icon-div {
+        display: none;
+    }
+
+    .brand-text1 {
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 46px;
+
+    }
+
+    .brand-text2 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+}
