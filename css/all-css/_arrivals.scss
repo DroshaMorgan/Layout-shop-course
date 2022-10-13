@@ -1,0 +1,40 @@
+.arrivals {
+    background: #F8F3F4;
+    height: 148px;
+    margin-bottom: 50px;
+
+    .arrivals-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        .arrivals-left-block {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: $site-color;
+            padding-top: 60px;
+        }
+
+        .arrivals-right-block {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #636363;
+            padding-top: 65px;
+        }
+
+        @media (max-width: 420px) {
+            flex-direction: column;
+            align-items: center;
+
+            .arrivals-left-block {
+                padding-top: 24px;
+            }
+
+            .arrivals-right-block {
+                padding-top: 32px;
+            }
+        }
+    }
+}
