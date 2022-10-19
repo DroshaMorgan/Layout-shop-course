@@ -122,6 +122,14 @@
                     padding-bottom: 20px;
                 }
             }
+
+
+        }
+
+        @media (max-width: 768.5px) {
+            .hidden {
+                display: none;
+            }
         }
 
         @media (max-width: 768.5px) {
